@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;700&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Open+Sans:wght@400;600;700&family=Outfit:wght@300;400;600&family=Poppins&family=Raleway:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    /* Text */
+    --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+    /* Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    /* Secondary */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+    --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main {
+    position: relative;
+    max-width: 100%;
+}
+main::before {
+    position: absolute;
+    content: "";
+    width: 550px;
+    height: 200%;
+    background-color: var(--Light-Violet);
+    background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    z-index: -1;
+    bottom: 0;
+    left: -64%;
+    border-radius: 17.5rem;
+}
+main .box {
+    font-size: 16px;
+    color: var(--Grayish-Blue-placeholder-text);
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    main {
+        width: 100%;
+    }
+    main .box {
+        flex-direction: column;
+        height: 90vh;
+    }
+}
+.box section:first-of-type {
+    background-color: var(--Light-Grayish-Violet-app-background);
+    width: 270px;
+    border-radius: 1.5rem;
+    position: relative;
+    border: 10px solid var(--White);
+    box-shadow: 0 10px 30px hsl(271deg 36% 24% / 10%);
+}
+.box section:first-of-type::before {
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 30px;
+    background-color: var(--White);
+    border-radius: 2.5rem;
+    left: 50px;
+    top: -10px;
+}
+@media (max-width: 767px) {
+    main::before {
+        position: absolute;
+        width: 60%;
+        left: -5rem;
+        bottom: 6rem;
+    }
+}
+.box .container .avatar {
+    display: flex;
+    gap: 0.625rem;
+    padding-top: 2rem;
+    background-image: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: 100%;
+    margin-top: 0;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding-left: 2rem;
+}
+.box .container .avatar > img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+} 
+.box .container .avatar .desc {
+    margin-bottom: 1rem;
+}
+.box .container .avatar .desc > h3 {
+    font-size: 12px;
+    color: var(--White);
+}
+.box .container .avatar .desc p {
+    font-size: 12px;
+}
+.content {
+    line-height: 1.5;
+    padding: 0.3rem;
+}
+.content p:first-child {
+    margin: 0.3rem 0;
+}
+.content p:first-child,
+.content p:last-child {
+    padding: 0.5rem;
+    font-size: 6.5px;
+    width: 60%;
+    margin-left: 0.5rem;
+    border-radius: 0.7rem;
+    background-color: var(--Grayish-Blue-placeholder-text);
+    color: var(--Moderate-Violet-chat-on-the-left);
+}
+.photos img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.7rem;
+}
+.photos {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin: 0.5rem 0.9rem;
+}
+.content-two {
+    font-weight: 700;
+    width: 50%;
+}
+.content-two > article {
+    position: relative;
+    right: -110px;
+}
+.content-two p:first-child,
+.content-two p:last-child {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 6.5px;
+    background-color: var(--White);
+    border-radius: 0.7rem;
+    line-height: 1.5;
+}
+.content-two p:last-child {
+    width: fit-content;
+    margin-left: 3.4rem;
+}
+.content-three {
+    background-color: var(--Grayish-Blue-placeholder-text);    color: var(--Moderate-Violet-chat-on-the-left);
+    font-weight: 700;
+    font-size: 8.5px;
+    line-height: 1.6;
+    width: 61%;
+    padding: 0.5rem;
+    border-radius: 0.9rem;
+    margin: 1rem;
+}
+.first-price,
+.second-price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 0.8rem;
+    margin: 0.5rem 0.8rem;
+    border-radius: 0.9rem;
+    font-size: 10.5px;
+    width: 70%;
+    color: var(--White);
+    position: relative;
+}
+.first-price::before,
+.second-price::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    left: 5px;
+}
+.first-price span,
+.second-price span {
+    color: var(--White);
+    font-size: 13px;
+}
+.form > input[type="text"] {
+    color: var(--Dark-Grayish-Violet-paragraph);
+    font-weight: 700;
+}
+/* section-2 */
+section:last-of-type {
+    width: 400px;
+}
+@media (max-width: 767px) {
+    section:last-of-type {
+        text-align: center;
+    }
+    section:last-of-type span {
+        font-size: 1.5625rem;
+    }
+    section:last-of-type p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+section:last-of-type span {
+    font-size: 35px;
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+    font-weight: 700;
+}
+section:last-of-type p {
+    margin-top: 1rem;
+    line-height: 1.7;
+    color: var(--Desaturated-Dark-Violet-chat-on-the-right);
+}
